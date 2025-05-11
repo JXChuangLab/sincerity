@@ -1,0 +1,195 @@
+/* PricingCard.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans+SC:wght@400;500&display=swap');
+
+.pricing-card {
+    display: grid;
+    gap: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    padding: 1.5rem;
+    align-items: center;
+    /* 垂直居中对齐 */
+}
+
+/* Position variants */
+.pricing-card.image-left {
+    grid-template-columns: 1fr 1.6fr;
+    grid-template-areas: "image content";
+}
+
+.pricing-card.image-right {
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-areas: "content image";
+}
+
+.pricing-card .pc-image {
+    grid-area: image;
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.pricing-card .pc-content {
+    grid-area: content;
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Ensure the image always fills its cell */
+.pricing-card .pc-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.pricing-card .pc-image img:hover {
+    transform: scale(1.03);
+}
+
+/* 内容排版 - 左侧图片时内容靠左对齐 */
+.pricing-card.image-left .pc-content {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+/* 内容排版 - 右侧图片时内容靠右对齐 */
+.pricing-card.image-right .pc-content {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.pricing-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.pricing-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff7d00;
+    margin-bottom: 0.2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.pricing-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.pricing-price {
+    margin-bottom: 0.3rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-right: 0.5rem;
+}
+
+.price-detail {
+    font-size: 1rem;
+    color: #666;
+}
+
+.pricing-price-en {
+    margin-bottom: 1rem;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.pricing-features {
+    display: grid;
+    gap: 0.7rem;
+}
+
+/* 特性文本 - 左侧图片时特性靠左对齐 */
+.pricing-card.image-left .feature-item,
+.pricing-card.image-left .feature-item-en {
+    text-align: left;
+}
+
+/* 特性文本 - 右侧图片时特性靠右对齐 */
+.pricing-card.image-right .feature-item,
+.pricing-card.image-right .feature-item-en {
+    text-align: right;
+}
+
+.feature-item {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 0.2rem;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 500;
+}
+
+.feature-item-en {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 400;
+}
+
+/* 左侧版本的图标方向 */
+.pricing-card.image-left .feature-item:before {
+    content: "▸ ";
+    color: #ff7d00;
+}
+
+/* 右侧版本的图标方向 */
+.pricing-card.image-right .feature-item:before {
+    content: " ◂";
+    color: #ff7d00;
+}
+
+/* Mobile: always stack */
+@media (max-width: 768px) {
+    .pricing-card {
+        grid-template-columns: 1fr !important;
+        grid-template-areas:
+            "image"
+            "content" !important;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .pricing-card .pc-content {
+        padding: 1rem 0.5rem !important;
+    }
+
+    /* 在移动设备上始终居中对齐 */
+    .pricing-card.image-left .pc-content,
+    .pricing-card.image-right .pc-content,
+    .pricing-card.image-left .feature-item,
+    .pricing-card.image-right .feature-item,
+    .pricing-card.image-left .feature-item-en,
+    .pricing-card.image-right .feature-item-en {
+        text-align: center;
+    }
+
+    /* 在移动设备上统一使用左箭头符号 */
+    .pricing-card.image-left .feature-item:before,
+    .pricing-card.image-right .feature-item:before {
+        content: "▸ ";
+    }
+
+    .pricing-card .pc-image {
+        min-height: 200px;
+    }
+}

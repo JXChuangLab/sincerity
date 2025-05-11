@@ -1,0 +1,175 @@
+/* ——————— Banner 轮播 ——————— */
+.banner {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* dots */
+.dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    translate: -50% 0;
+    display: flex;
+    gap: 0.6rem;
+}
+
+.dot {
+    width: 44px;
+    height: 3px;
+    background: #eee;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #ff7d00;
+}
+
+/* ——————— Features 2×2 → 1×4 ——————— */
+.features-grid {
+    display: grid;
+    gap: 1.8rem;
+}
+
+@media (min-width: 600px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 保持 2×2，不放大 */
+    }
+}
+
+/* ——————— 客户画廊 ——————— */
+.gallery {
+    position: relative;
+    max-width: 820px;
+    margin: 0 auto 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-main {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+    object-fit: cover;
+}
+
+/* 左右箭头 */
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    font-size: 2.4rem;
+    font-weight: 600;
+    background: rgba(0 0 0 / 0.4);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    line-height: 42px;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s ease;
+    user-select: none;
+}
+
+.gallery-arrow:hover {
+    background: rgba(0 0 0 / 0.6);
+}
+
+.gallery-arrow.left {
+    left: -22px;
+}
+
+.gallery-arrow.right {
+    right: -22px;
+}
+
+/* ===== 案例 Showcase ===== */
+.cases {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 1rem;
+}
+
+.case-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.case-item.reverse {
+    /* 大屏左右交错，仅在 desktop 应用 */
+}
+
+.case-image {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+    object-fit: cover;
+}
+
+.case-content {
+    max-width: 520px;
+    text-align: center;
+}
+
+.case-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ff7d00;
+    margin-bottom: 0.6rem;
+}
+
+.case-desc {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* —— 大屏左右排布 —— */
+@media (min-width: 768px) {
+    .case-item {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .case-item.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .case-content {
+        text-align: left;
+    }
+}
+
+/* ——————— 其余原有样式保持不变 ——————— */

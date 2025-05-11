@@ -1,0 +1,132 @@
+/* 全局字体已在主站引入，可省略再次 @import */
+
+.guarantee-page {
+    font-family: "Noto Sans SC", sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+/* ===== Carousel ===== */
+.carousel {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 14px;
+    margin-bottom: 2.5rem;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* 导航点 */
+.dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    translate: -50% 0;
+    display: flex;
+    gap: 0.6rem;
+}
+
+.dot {
+    width: 44px;
+    height: 3px;
+    background: #eee;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: #ff7d00;
+}
+
+/* ===== 标题 ===== */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #ff7d00;
+    position: relative;
+    width: max-content;
+    margin-inline: auto;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% 0;
+    width: 60px;
+    height: 3px;
+    background: #ff7d00;
+}
+
+/* ===== 保障卡片网格 ===== */
+.features-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 2.2rem 1.6rem;
+    text-align: center;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: #ff7d00;
+}
+
+.feature-text {
+    font-size: 0.96rem;
+    color: #555;
+    line-height: 1.65;
+}
+
+/* ===== 响应式 ===== */
+@media (min-width: 600px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,156 @@
+/* ContactSection.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+.contact-section {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: #333;
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 上方 CTA 行 */
+.cta-row {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.cta-text {
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cta-sub {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    background: #ff7d00;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #e56a00;
+}
+
+.cta-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 联系方式卡片网格 */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-desc {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.card-sub {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.card-button {
+    background: #ff7d00;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card-button:hover {
+    background: #e56a00;
+}
+
+/* 服务范围 */
+.service-range {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+}
+
+.service-range h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.service-range p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* 响应式 */
+@media (min-width: 768px) {
+    .cta-row {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .cta-text {
+        flex: 1;
+    }
+
+    .cta-image {
+        flex: 1;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
