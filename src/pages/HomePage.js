@@ -9,16 +9,6 @@ const bannerImages = [
     "https://miaoda-image.cdn.bcebos.com/img/corpus/a47f7b98dac24afaa847308d18955e48.jpg"
 ];
 
-/* —— 客户画廊（左右切换） —— */
-const galleryImages = [
-    "https://miaoda-image.cdn.bcebos.com/img/corpus/69ad1eec1a934335b8603f409e14942f.jpg",
-    "https://miaoda-image.cdn.bcebos.com/img/corpus/3f32599ea60841c78ad26b1aeb009ae9.jpg",
-    "https://miaoda-image.cdn.bcebos.com/img/corpus/4fcb48ba930e48719936404fddddc33b.jpg",
-    "https://miaoda-image.cdn.bcebos.com/img/corpus/46a2c86c29fe4d1da028538bddf3d30d.jpg",
-    "https://miaoda-image.cdn.bcebos.com/img/corpus/18f8864a2d7c4a0ca8b6b49f9f9ba4f6.jpg",
-    "https://miaoda-image.cdn.bcebos.com/img/corpus/bedfae8fe92946e6beaeb6f532436120.jpg"
-];
-
 export default function HomePage() {
     /* —— Banner 自动轮播 —— */
     const [bannerIdx, setBannerIdx] = useState(0);
