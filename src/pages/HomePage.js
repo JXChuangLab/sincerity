@@ -30,13 +30,6 @@ export default function HomePage() {
         return () => clearInterval(timer);
     }, []);
 
-    /* —— 客户画廊 —— */
-    const [galleryIdx, setGalleryIdx] = useState(0);
-    const prevGallery = () =>
-        setGalleryIdx((i) => (i - 1 + galleryImages.length) % galleryImages.length);
-    const nextGallery = () =>
-        setGalleryIdx((i) => (i + 1) % galleryImages.length);
-
     return (
         <div className="homepage">
             {/* Banner 轮播 */}
