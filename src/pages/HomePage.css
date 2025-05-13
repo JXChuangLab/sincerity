@@ -49,13 +49,13 @@
 
 @media (min-width: 600px) {
     .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media (min-width: 992px) {
     .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         /* 保持 2×2，不放大 */
     }
 }
@@ -116,6 +116,7 @@
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto 4rem;
+    margin: 4rem auto 4rem;
     padding: 0 1rem;
 }
 

@@ -11,28 +11,24 @@ const slides = [
 const features = [
     {
         icon: "https://miaoda-img.cdn.bcebos.com/img/corpus/15ae1841780f46b0965e260068c12213.jpg",
-        title: "不满意？48 h 内免费返工",
-        text: "若服务不达标，48 小时内立刻返工，直到您满意为止。"
+        title: "不满意？24 h 内免费返工",
+        titleEn: "dissatisfied? Free rework within 24 hours.",
+        text: "若服务不达标，48 小时内立刻返工，直到您满意为止。",
+        textEn: "If the service does not meet the standard, we will immediately rework within 48 hours until you are satisfied."
     },
     {
         icon: "https://miaoda-img.cdn.bcebos.com/img/corpus/7a5b3673bb7b4525a8191bdbf9b39423.jpg",
         title: "200 万澳元责任险",
-        text: "每次服务均投保 A$2 million 公共责任险，为您的财产保驾护航。"
+        titleEn: "2 million Australian dollars liability insurance",
+        text: "每次服务均投保200万澳元公共责任险，为您的财产保驾护航。",
+        textEn: "Every service is insured with $2 million public liability insurance to safeguard your property."
     },
     {
         icon: "https://miaoda-img.cdn.bcebos.com/img/corpus/a6c1977121984e7685dda05226c9f4dd.jpg",
         title: "员工 100% 背景核查",
-        text: "所有员工通过 WA Police Clearance，专业且安全可靠。"
-    },
-    {
-        icon: "https://miaoda-img.cdn.bcebos.com/img/corpus/f1e954d55d604159b3dc9e8dbdc7f596.jpg",
-        title: "环保清洁剂",
-        text: "全线选用环保配方，宠物 & 宝宝友好，守护家人健康。"
-    },
-    {
-        icon: "https://miaoda-img.cdn.bcebos.com/img/corpus/5c74627393d248f18dc2f076af005c3f.jpg",
-        title: "在线预约 · 即时确认",
-        text: "微信 / WhatsApp / 官网一键下单，系统实时锁定时段。"
+        titleEn: "100% background check for employees",
+        text: "所有员工通过 WA Police Clearance，专业且安全可靠。",
+        textEn: "All employees are professional, safe, and reliable through WA Police Clearance."
     }
 ];
 
@@ -73,15 +69,17 @@ export default function GuaranteePage() {
                 </div>
 
                 {/* 标题 */}
-                <h2 className="section-title">橙心橙意 · 五重服务保障</h2>
-
+                <h2 className="section-title">橙心橙意 · 三重服务保障</h2>
+                <h2 className="section-title">Sincerely Clean · Triple Service Guarantee </h2>
                 {/* 保障卡片 */}
                 <div className="features-grid">
                     {features.map((f, idx) => (
                         <div key={idx} className="feature-card">
                             <img src={f.icon} alt="" className="feature-icon" />
                             <h3 className="feature-title">{f.title}</h3>
+                            <h3 className="feature-title">{f.titleEn}</h3>
                             <p className="feature-text">{f.text}</p>
+                            <p className="feature-text">{f.textEn}</p>
                         </div>
                     ))}
                 </div>

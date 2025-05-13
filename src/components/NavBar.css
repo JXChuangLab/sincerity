@@ -15,6 +15,21 @@
     font-family: 'Noto Sans SC', sans-serif;
 }
 
+/* 整个品牌块 */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    /* 图标与文字间距 */
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+/* 悬浮时整体放大 */
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
 .navbar-logo {
     font-weight: 700;
     font-size: 1.5rem;
@@ -22,6 +37,11 @@
     letter-spacing: 0.05em;
     transition: transform 0.3s ease;
     cursor: pointer;
+}
+
+.navbar-icon {
+    width: 30px;
+    height: 30px;
 }
 
 .navbar-logo:hover {

@@ -26,6 +26,7 @@ export default function ServerPage() {
 
                 {/* 标题 */}
                 <h2 className="section-title">服务产品</h2>
+                <h2 className="section-title">Service Products</h2>
 
                 {/* 价目列表 */}
                 <div className="service-list">

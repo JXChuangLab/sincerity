@@ -7,25 +7,25 @@ const CONTACT_ITEMS = [
     {
         icon: '📞',
         title: '中文联系电话',
-        desc: '138-xxxx-xxxx',
+        desc: '+86-13798461669',
         sub: '欢迎来电咨询，我们将竭诚为您服务',
     },
     {
         icon: '✉️',
         title: '中文邮箱',
-        desc: 'service@sinceritycleaningperth.com.cn',
+        desc: 'summerdai202207@163.com',
         sub: '随时欢迎发送邮件咨询，我们将尽快回复',
     },
     {
         icon: '📞',
         title: 'English Phone',
-        desc: '+61-xxxx-xxxx',
+        desc: '+61-451105818',
         sub: "Call us for more information, we're here to help",
     },
     {
         icon: '✉️',
         title: 'English Email',
-        desc: 'service@sinceritycleaningperth.com',
+        desc: 'summerdai202207@163.com',
         sub: "Feel free to email us, we'll get back to you soon",
     },
 ];
@@ -35,12 +35,16 @@ export default function ContactSection() {
         <section className="contact-section">
             <div className="cta-row">
                 <div className="cta-text">
-                    <h2 className="cta-title">立即预约服务</h2>
+                    <h2 className="cta-title">立即预约服务!</h2>
+                    <h2 className="cta-title">Book Now!</h2>
                     <p className="cta-sub">
                         橙心橙意清洁珀斯期待为您服务。<br />
                         中文英文双语服务，覆盖Scarborough到Canning Vale。
                     </p>
-                    <button className="cta-button">查看更多</button>
+                    <p className="cta-sub">
+                        Sincerity Cleaning Perth looks forward to serving you.<br />
+                        Chinese English bilingual service, covering Scarborough to Canning Vale.
+                    </p>
                 </div>
                 <div className="cta-image">
                     <img
@@ -61,12 +65,6 @@ export default function ContactSection() {
                     </div>
                 ))}
             </div>
-
-            {/* <div className="service-range">
-                <h4>服务范围</h4>
-                <p>从Scarborough到Canning Vale，全覆盖西澳首府！</p>
-            </div> */}
-            {/* 公共页脚 */}
             <Footer />
         </section>
     );
