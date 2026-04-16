@@ -17,12 +17,12 @@ export default function Footer() {
                 <div className="footer-section">
                     <h3 className="footer-heading">联系我们</h3>
                     <h3 className="footer-heading">Contact Us</h3>
-                    <p>澳洲:+61 451 105 818</p>
-                    <p>AU:+61 451 105 818</p>
+                    <p>澳洲:+61 409 868 602</p>
+                    <p>AU:+61 409 868 602</p>
                     <p>中国:+86 137 9846 1669</p>
                     <p>CN:+86 137 9846 1669</p>
-                    <p>邮箱: summerdai202207@163.com</p>
-                    <p>Email: summerdai202207@163.com</p>
+                    <p>邮箱: lindalee@163.com</p>
+                    <p>Email: lindalee@163.com</p>
                     <p>范围：Joondalup – Rockingham</p>
                     <p>Range：Joondalup – Rockingham</p>
                 </div>

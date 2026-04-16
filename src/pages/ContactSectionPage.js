@@ -13,19 +13,19 @@ const CONTACT_ITEMS = [
     {
         icon: '✉️',
         title: '中文邮箱',
-        desc: 'summerdai202207@163.com',
+        desc: 'lindalee@163.com',
         sub: '随时欢迎发送邮件咨询，我们将尽快回复',
     },
     {
         icon: '📞',
         title: 'English Phone',
-        desc: '+61-451105818',
+        desc: '+61-409868602',
         sub: "Call us for more information, we're here to help",
     },
     {
         icon: '✉️',
         title: 'English Email',
-        desc: 'summerdai202207@163.com',
+        desc: 'lindalee@163.com',
         sub: "Feel free to email us, we'll get back to you soon",
     },
 ];
